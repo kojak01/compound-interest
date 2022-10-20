@@ -29,7 +29,7 @@
         <label for="">How many years?:</label> 
         <input type="text" id="t" value="5">
         <label for="" class="result">Result:</label> 
-        <input type="text" id="result-value">
+        <input type="text" id="result-value" value="5">
     </div>
     <script>
         // anchor to the elements
@@ -40,10 +40,10 @@
         const inputResultValue = document.getElementById('result-value');
         // capital * Math.pow((1+(0.04/12)) , (12 * 5) )
         //variables
-        let capital = 1000; 
-        let rate = 0.04;
-        let n = 12; //capitalization every year
-        let t = 5; //deposit - how many years
+        let capital = inputCapital.value; 
+        let rate = inputRate.value;
+        let n = inputN.value; //capitalization every year
+        let t = inputT.value; //deposit - how many years
         let finalMoney = capital * Math.pow((1 + (rate/n)), n * t); // formula for compound interest
         console.log(Math.ceil(finalMoney)); // ceil / floor
     </script>
