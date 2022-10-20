@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compound-interest</title>
+    <style>
+        #calc {
+            display: grid;
+            grid-template-columns: auto auto;  /*grid with 2 columns*/
+            max-width: 450px;
+            gap: 10px;
+            text-align: right;
+        }
+        
+    </style>
 </head>
 <body>
+    
+    <div id="calc"></div>
+        <label for="">Capital:</label> 
+        <input type="text" id="capital" value="1000">
+
+        <label for="">Rate:</label> 
+        <input type="text" id="rate" value="0.04">
+
+        <label for="">Capitalization - in months:</label> 
+        <input type="text" id="n" value="12">
+
+        <label for="">How many years?:</label> 
+        <input type="text" id="t" value="5">
+
     <script>
         // capital * Math.pow((1+(0.04/12)) , (12 * 5) )
 
@@ -18,7 +42,7 @@
         let t = 5; //deposit - how many years
 
         let finalMoney = capital * Math.pow((1 + (rate/n)), n * t); // formula for compound interest
-        console.log(Math.floor(finalMoney));
+        console.log(Math.ceil(finalMoney)); // ceil / floor
     </script>
 </body>
 </html>
