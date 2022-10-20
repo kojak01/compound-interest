@@ -47,6 +47,16 @@
         let t = inputT.value; //deposit - how many years
         let finalMoney = capital * Math.pow((1 + (rate/n)), n * t); // formula for compound interest
         console.log(Math.ceil(finalMoney)); // ceil / floor
+        //put the formula in the function
+        function calculateCopoundInterest(capital, rate, n, t,) {
+            return capital * Math.pow((1 + (rate/n)), n * t);
+        }
+
+        // anchor to the button
+        document.getElementById('calculate').addEventListener('click', function(){
+
+        });
+
     </script>
 </body>
 </html>
