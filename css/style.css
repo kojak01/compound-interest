@@ -1,0 +1,10 @@
+#calc {
+    display: grid;
+    grid-template-columns: auto auto;  /*grid with 2 columns*/
+    max-width: 450px;
+    gap: 10px;
+    text-align: right;
+}
+.result {
+    font-weight: bold;
+}
